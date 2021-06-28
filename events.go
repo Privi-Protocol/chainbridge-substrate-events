@@ -2,6 +2,7 @@ package events
 
 import (
 	"github.com/centrifuge/go-substrate-rpc-client/v3/types"
+	"github.com/ethereum/go-ethereum/common"
 )
 
 type Events struct {
@@ -25,6 +26,7 @@ type EventFungibleTransfer struct {
 	Destination  types.U8
 	DepositNonce types.U64
 	ResourceId   types.Bytes32
+	TokenAddress common.Address
 	Amount       types.U256
 	Recipient    types.Bytes
 	Topics       []types.Hash
